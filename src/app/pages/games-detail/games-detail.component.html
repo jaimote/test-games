@@ -1,0 +1,111 @@
+<a href="/"> return < </a>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card p-3">
+        <div class="d-flex flex-row mb-3">
+          <img src="{{ game.thumbnail }}" width="450">
+          &nbsp;
+          <div class="d-flex flex-column ml-2">
+            <span>{{ game.title }}</span>
+            <span>{{ game.status }}</span>
+            <span class="text-black-50">{{ game.short_description }}</span>
+            <span class="ratings">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </span>
+            <br>
+
+            <span><h4>Additional Information</h4></span>
+            <div class="row">
+              <div class="col-4">
+                <span>Title</span>
+                <div>{{ game.title }}</div>
+              </div>
+              <div class="col-4">
+                <span>Developer</span>
+                <div>{{ game.developer }}</div>
+              </div>
+              <div class="col-4">
+                <span>Publisher</span>
+                <div>{{ game.publisher }}</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <span>Release date</span>
+                <div>{{ game.release_date }}</div>
+              </div>
+              <div class="col-4">
+                <span>Genre</span>
+                <div>{{ game.genre }}</div>
+              </div>
+              <div class="col-4">
+                <span>Platform</span>
+                <div>{{ game.platform }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h6>{{ game.description }}</h6>
+        <span>
+          <h4>{{ game.title }} Screenshots</h4>
+        </span>
+        <div class="row">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb" *ngFor="let imagen of game.screenshots">
+                <img class="img-thumbnail" src="{{ imagen.image }}"
+                  alt="Another alt text">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <span>
+            <h4>Minimum System Requirements</h4>
+          </span>
+          <div class="row">
+            <div class="col-4">
+              <span>OS</span>
+              <div>{{ game.minimum_system_requirements.os }}</div>
+            </div>
+            <div class="col-4">
+              <span>Processor</span>
+              <div>{{ game.minimum_system_requirements.processor }}</div>
+            </div>
+            <div class="col-4">
+              <span>Memory</span>
+              <div>{{ game.minimum_system_requirements.memory }}</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <span>Graphics</span>
+              <div>{{ game.minimum_system_requirements.graphics }}</div>
+            </div>
+            <div class="col-4">
+              <span>Storage</span>
+              <div>{{ game.minimum_system_requirements.storage }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between install mt-3">
+          <span>
+            <a class="btn btn-info" href="{{ game.game_url }}" target="_blank">
+              <span class="text-uppercase fs-4">Play Now&nbsp;
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </a>
+          </span>
+          <a class="btn btn-warning" href="{{ game.freetogame_profile_url }}" target="_blank">
+              <span class="text-uppercase fs-4">Free to game&nbsp;
+              <i class="fa fa-angle-right"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

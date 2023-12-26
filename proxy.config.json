@@ -1,0 +1,11 @@
+{
+    "/api/*": {
+        "target": "https://www.freetogame.com/api/",
+        "secure": false,
+        "logLevel": "debug",
+        "pathRewrite": {
+            "^/api": ""
+        },
+        "changeOrigin": true
+    }
+}
